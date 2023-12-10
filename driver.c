@@ -10,6 +10,7 @@ void matInit(float* matrix, uint64_t maxRow, uint64_t maxCol);
 void matPrint(float* matrix, uint64_t maxRow, uint64_t maxCol);
 float pointCalc(float center, float north, float south, float east, float west);
 void matCalc(float* matrix, uint64_t maxRow, uint64_t startRow, uint64_t startCol, uint64_t endRow, uint64_t endCol);
+float* matPart(float* matrix, uint64_t maxRow, uint64_t startRow, uint64_t startCol, uint64_t endRow, uint64_t endCol);
 
 int main(int argc, char* argv[])
 {
@@ -49,6 +50,7 @@ int main(int argc, char* argv[])
         matPrint(matrix, matRow, matCol);
     }
     free (matrix);
+    return 0;
 }
 
 void matInit(float* matrix, uint64_t maxRow, uint64_t maxCol)
